@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning</title>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <svg width="70" height="70" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="English Learning logo">
+                <circle cx="60" cy="60" r="55" fill="#1E88E5" />
+                <path d="M30 42 H90 M30 60 H90 M30 78 H72" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+                <path d="M72 78 L92 98" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+            </svg>
+            <div>
+                <h1>English Learning</h1>
+                <p>Learn English with confidence</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="navigation">
+        <div><a href="#">Trang chủ</a></div>
+        <div><a href="#">Khóa học</a></div>
+        <div><a href="#">Luyện thi IELTS</a></div>
+        <div><a href="#">Giảng viên</a></div>
+        <div><a href="#">Liên hệ</a></div>
+    </div>
+
+    <main>
+        <article class="course">
+            <h2>Khóa học Tiếng Anh Giao Tiếp Cơ Bản</h2>
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900" alt="Học viên đang học tiếng Anh cùng giảng viên" width="450">
+
+            <p>
+                Khóa học này dành cho người mới bắt đầu, giúp bạn cải thiện kỹ năng
+                <strong>nghe</strong>, <strong>nói</strong> và phản xạ giao tiếp trong các tình huống thực tế.
+            </p>
+            <p>
+                Sau 8 tuần học, bạn có thể tự tin giới thiệu bản thân, trao đổi trong công việc và giao tiếp hàng ngày với người nước ngoài.
+            </p>
+            <p>
+                <strong>Ưu điểm nổi bật:</strong> lớp học tối đa 12 học viên, giáo viên giàu kinh nghiệm, tài liệu cập nhật và thực hành theo chủ đề đời sống.
+            </p>
+        </article>
+    </main>
+        
+</body>
+</html>
+www.w3.org
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intianl-scale=1.0">
+    <title>Câu 2</title>
+    <style>
+      .group {
+        display:flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 1px auto;
+      }
+      .item {
+        width: 70px; 
+        height: 100px;
+        background-color: #00e56b;
+        border: 1px solid black;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        font-weight: 200;
+      }
+      .advert {
+        width: 100%;
+        height: 200px;
+        border: 2px solid red;
+        background-color: #ffe700;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        font-weight: 200;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Câu 2:</h1>
+    <div class="group">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+    </div>
+    <div class="advert">Advert</div>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 3 - JSON và while</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f7fb;
+        }
+
+        #course-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .course-box {
+            background: #ffffff;
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .course-box h3 {
+            margin-top: 0;
+            color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Câu 3 - Danh sách khóa học từ JSON</h1>
+    <div id="course-list"></div>
+
+    <script>
+        const coursesJson = `[
+            {
+                "tenKhoaHoc": "Tiếng Anh Giao Tiếp Cơ Bản",
+                "moTa": "Dành cho người mới bắt đầu, luyện phản xạ nghe nói theo tình huống thực tế.",
+                "hocPhi": "2.500.000 VNĐ",
+                "khaiGiang": "10/06/2026"
+            },
+            {
+                "tenKhoaHoc": "IELTS Foundation 4.0 - 5.5",
+                "moTa": "Xây nền tảng ngữ pháp, từ vựng và kỹ năng làm bài IELTS.",
+                "hocPhi": "3.200.000 VNĐ",
+                "khaiGiang": "15/06/2026"
+            },
+            {
+                "tenKhoaHoc": "TOEIC 450+",
+                "moTa": "Tập trung từ vựng công sở, cấu trúc đề TOEIC và mẹo làm bài.",
+                "hocPhi": "2.800.000 VNĐ",
+                "khaiGiang": "20/06/2026"
+            },
+            {
+                "tenKhoaHoc": "Phát Âm Chuẩn Với Giáo Viên Bản Ngữ",
+                "moTa": "Sửa lỗi phát âm, luyện trọng âm và ngữ điệu chuẩn quốc tế.",
+                "hocPhi": "3.500.000 VNĐ",
+                "khaiGiang": "01/07/2026"
+            }
+        ]`;
+
+        const courses = JSON.parse(coursesJson);
+        const list = document.getElementById("course-list");
+        var i = 0;
+
+        while (i < courses.length) {
+            const c = courses[i];
+            const div = document.createElement("div");
+            div.className = "course-box";
+            div.innerHTML = `
+                <h3>${c.tenKhoaHoc}</h3>
+                <p><strong>Mô tả:</strong> ${c.moTa}</p>
+                <p><strong>Học phí:</strong> ${c.hocPhi}</p>
+                <p><strong>Khai giảng:</strong> ${c.khaiGiang}</p>
+            `;
+            list.appendChild(div);
+            i++;
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>Câu 4:</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: arial;
+                background: #ffffff;
+            }
+            input, select{
+                display: block;
+                margin-bottom: 2px;
+            }
+            .error {
+                color: red;
+                margin-bottom: 10x;
+                font-size: 10px;
+            }
+            @media (max-width: 414px) {
+                .container {
+                    margin: 12px;
+                    padding: 14px;
+                }
+                h1 {
+                    font-sizeL: 22px;
+                }
+                button {
+                    width: 100%;
+                }
+            }
+            /* Máy tính bảng: 415px - 1024px */
+            @media (min-width: 415px) and (max-width: 1024px) {
+                .container {
+                    max-width: 760px;
+                    margin: 18px auto;
+                }
+            }
+
+            /* Máy tính: >= 1025px, tối ưu cho 1440px */
+            @media (min-width: 1025px) {
+                .container {
+                    max-width: 980px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Câu 4:</h2>
+        <div class="container">
+        <form id="register">
+            <label for="lastname">Họ và tên</label> 
+            <input type="text" id="lastname" size="15" placeholder="Nhập họ và tên">
+            <div class="error" id="name-error"></div>
+            <label for="email">Đia chỉ email</label> 
+            <input type="email" id="email" size="20" placeholder="example@gmail.com">
+            <div class="error" id="email-error"></div>
+            <label for="phone">Số điện thoại</label>
+            <input type="text" id="phone" size="10" placeholder="09xxxxxxxx">
+            <div class="error" id="phone-error"></div>
+            <label for="courses-select">Khóa học muốn đăng ký</label>
+            <select id="courses-select">
+                <option value="">---Chọn khóa học---</option>
+                <option>Tiếng anh giao tiếp cho người cơ bản</option>
+                <option>IELTS Foundation 4.0 - 5.5</option>
+                <option>TOEIC 450+</option>
+                <option>Phát Âm Chuẩn Với Giáo Viên Bản Ngữ</option>
+            </select>
+            <div class="error" id="courses-error"></div>
+            <label for="time">Thời gian ưu tiên học<label>
+            <select id="time">
+                <option value="">---Chọn thời gian học---</option>
+                <option>Sáng<option>
+                <option>Chiều<option>
+                <option>Tối<option>
+                <option>Cuối tuần<option>
+            </select>
+            <div class="error" id="time-error"></div>
+            <button type="submit">Submit</button>
+            </div>
+        </form>
+        </div>
+        <script>
+            const form = document.getElementById("register");
+            form.addEventListener("submit", function(e){
+                e.preventDefault();
+
+                let lastname = document.getElementById("lastname").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let phone = document.getElementById("phone").value.trim();
+                let courses = document.getElementById("courses-select").value.trim();
+                let time = document.getElementById("time").value;
+
+                document.getElementById("name-error").innerHTML = "";
+                document.getElementById("email-error").innerHTML = "";
+                document.getElementById("phone-error").innerHTML = "";
+                document.getElementById("courses-error").innerHTML = "";
+                document.getElementById("time-error").innerHTML = "";
+
+                let check = true;
+
+                if(lastname == "") {
+                    document.getElementById("name-error").innerHTML = "Vui lòng nhập thông tin";
+                    check = false;
+                }
+                if(email == "" || !email.includes("@")) {
+                    document.getElementById("email-error").innerHTML = "Email không hợp lệ";
+                    check = false;
+                }
+                if(phone == "" || isNaN(phone)) {
+                    document.getElementById("phone-error").innerHTML = "Số điện thoại không hợp lệ";
+                    check = false;
+                }
+                if(courses == "") {
+                    document.getElementById("courses-error").innerHTML = "Vui lòng chọn khóa học";
+                    check = false;
+                }
+                if(time == "") {
+                    document.getElementById("time-error").innerHTML = "Vui lòng chọn thời gian học";
+                    check = false;
+                }
+                if(check) {
+                    alert("Đăng ký thành công!");
+                }
+            })
+        </script>
+    </body>
+</html>     
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inial-scale=1.0">
+        <title>Câu 5</title>
+        <style>
+            .group {
+                display:flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin: 1px auto;
+            }
+            .item {
+                width: 70px; 
+                height: 100px;
+                background-color: #00e56b;
+                border: 1px solid black;
+                display: flex;
+                align-items: center; 
+                justify-content: center;
+                font-weight: 200;
+            }
+            .advert {
+                width: 100%;
+                height: 200px;
+                border: 2px solid red;
+                background-color: #ffe700;
+                display: flex;
+                align-items: center; 
+                justify-content: center;
+                font-weight: 200;
+                transition: 0.3s ease;
+            }
+            .advert:hover {
+                background-color: red;
+                font-style: italic;
+                border: 2px solid yellow;
+            }
+             body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f7fb;
+            }
+            .navigation {
+              display: flex;
+              column-gap: 10px;
+            }
+            .navy {
+              display: box-sizing;
+              border: 1px solid black;
+              background-color: blue;
+              justify-content: center ;
+              border-radius: 3px;
+              padding: 4px;
+            }
+            .navy a {
+              color: white;
+              text-decoration: none;
+            }
+
+            #course-list {
+                display: flex;
+                gap: 14px;
+            }
+
+            .course-box {
+                background: #ffffff;
+                border: 1px solid #d9e2ec;
+                border-radius: 8px;
+                padding: 14px;
+            }
+
+            .course-box h3 {
+                margin-top: 0;
+                color: #1565c0;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: arial;
+                background: #ffffff;
+            }
+            input, select{
+                display: block;
+                margin-bottom: 2px;
+            }
+            .error {
+                color: red;
+                margin-bottom: 10x;
+                font-size: 10px;
+            }
+            @media (max-width: 414px) {
+                .container {
+                    margin: 12px;
+                    padding: 14px;
+                }
+                h1 {
+                    font-sizeL: 22px;
+                }
+                button {
+                    width: 100%;
+                }
+            }
+            /* Máy tính bảng: 415px - 1024px */
+            @media (min-width: 415px) and (max-width: 1024px) {
+                .container {
+                    max-width: 760px;
+                    margin: 18px auto;
+                }
+            }
+
+            /* Máy tính: >= 1025px, tối ưu cho 1440px */
+            @media (min-width: 1025px) {
+                .container {
+                    max-width: 980px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+         <header>
+        <div class="logo-area">
+            <svg width="70" height="70" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="English Learning logo">
+                <circle cx="60" cy="60" r="55" fill="#1E88E5" />
+                <path d="M30 42 H90 M30 60 H90 M30 78 H72" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+                <path d="M72 78 L92 98" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+            </svg>
+            <div>
+                <h1>English Learning</h1>
+                <p>Learn English with confidence</p>
+                <div class="slogan">Slogan: "Mỗi ngày một bước tiến, chinh phục tiếng anh dễ dàng"</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="navigation">
+        <div class="navy"><a href="#">Trang chủ</a></div>
+        <div class="navy"><a href="#">Khóa học</a></div>
+        <div class="navy"><a href="#">Luyện thi IELTS</a></div>
+        <div class="navy"><a href="#">Giảng viên</a></div>
+        <div class="navy"><a href="#">Liên hệ</a></div>
+    </div>
+    
+    <div class="advert"><h1>Ưu đãi 20% từ ngày 20/10//2026</h1></div>
+    <h2>Khóa học</h2>
+    <div id="course-list"></div>
+
+    <div class="container">
+        <form id="register">
+            <label for="lastname">Họ và tên</label> 
+            <input type="text" id="lastname" size="15" placeholder="Nhập họ và tên">
+            <div class="error" id="name-error"></div>
+            <label for="email">Đia chỉ email</label> 
+            <input type="email" id="email" size="20" placeholder="example@gmail.com">
+            <div class="error" id="email-error"></div>
+            <label for="phone">Số điện thoại</label>
+            <input type="text" id="phone" size="10" placeholder="09xxxxxxxx">
+            <div class="error" id="phone-error"></div>
+            <label for="courses-select">Khóa học muốn đăng ký</label>
+            <select id="courses-select">
+                <option value="">---Chọn khóa học---</option>
+                <option>Tiếng anh giao tiếp cho người cơ bản</option>
+                <option>IELTS Foundation 4.0 - 5.5</option>
+                <option>TOEIC 450+</option>
+                <option>Phát Âm Chuẩn Với Giáo Viên Bản Ngữ</option>
+            </select>
+            <div class="error" id="courses-error"></div>
+            <label for="time">Thời gian ưu tiên học<label>
+            <select id="time">
+                <option value="">---Chọn thời gian học---</option>
+                <option>Sáng<option>
+                <option>Chiều<option>
+                <option>Tối<option>
+                <option>Cuối tuần<option>
+            </select>
+            <div class="error" id="time-error"></div>
+            <button type="submit">Submit</button>
+            </div>
+            
+        </form>
+        </div>
+          <script>
+        const coursesJson = `[
+            {
+                "tenKhoaHoc": "Tiếng Anh Giao Tiếp Cơ Bản",
+                "moTa": "Dành cho người mới bắt đầu, luyện phản xạ nghe nói theo tình huống thực tế.",
+                "hocPhi": "2.500.000 VNĐ",
+                "khaiGiang": "10/06/2026"
+            },
+            {
+                "tenKhoaHoc": "IELTS Foundation 4.0 - 5.5",
+                "moTa": "Xây nền tảng ngữ pháp, từ vựng và kỹ năng làm bài IELTS.",
+                "hocPhi": "3.200.000 VNĐ",
+                "khaiGiang": "15/06/2026"
+            },
+            {
+                "tenKhoaHoc": "TOEIC 450+",
+                "moTa": "Tập trung từ vựng công sở, cấu trúc đề TOEIC và mẹo làm bài.",
+                "hocPhi": "2.800.000 VNĐ",
+                "khaiGiang": "20/06/2026"
+            },
+            {
+                "tenKhoaHoc": "Phát Âm Chuẩn Với Giáo Viên Bản Ngữ",
+                "moTa": "Sửa lỗi phát âm, luyện trọng âm và ngữ điệu chuẩn quốc tế.",
+                "hocPhi": "3.500.000 VNĐ",
+                "khaiGiang": "01/07/2026"
+            }
+        ]`;
+
+        const courses = JSON.parse(coursesJson);
+        const list = document.getElementById("course-list");
+        var i = 0;
+
+        while (i < courses.length) {
+            const c = courses[i];
+            const div = document.createElement("div");
+            div.className = "course-box";
+            div.innerHTML = `
+                <h3>${c.tenKhoaHoc}</h3>
+                <p><strong>Mô tả:</strong> ${c.moTa}</p>
+                <p><strong>Học phí:</strong> ${c.hocPhi}</p>
+                <p><strong>Khai giảng:</strong> ${c.khaiGiang}</p>
+            `;
+            list.appendChild(div);
+            i++;
+
+        const form = document.getElementById("register");
+            form.addEventListener("submit", function(e){
+                e.preventDefault();
+
+                let lastname = document.getElementById("lastname").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let phone = document.getElementById("phone").value.trim();
+                let courses = document.getElementById("courses-select").value.trim();
+                let time = document.getElementById("time").value;
+
+                document.getElementById("name-error").innerHTML = "";
+                document.getElementById("email-error").innerHTML = "";
+                document.getElementById("phone-error").innerHTML = "";
+                document.getElementById("courses-error").innerHTML = "";
+                document.getElementById("time-error").innerHTML = "";
+
+                let check = true;
+
+                if(lastname == "") {
+                    document.getElementById("name-error").innerHTML = "Vui lòng nhập thông tin";
+                    check = false;
+                }
+                if(email == "" || !email.includes("@")) {
+                    document.getElementById("email-error").innerHTML = "Email không hợp lệ";
+                    check = false;
+                }
+                if(phone == "" || isNaN(phone)) {
+                    document.getElementById("phone-error").innerHTML = "Số điện thoại không hợp lệ";
+                    check = false;
+                }
+                if(courses == "") {
+                    document.getElementById("courses-error").innerHTML = "Vui lòng chọn khóa học";
+                    check = false;
+                }
+                if(time == "") {
+                    document.getElementById("time-error").innerHTML = "Vui lòng chọn thời gian học";
+                    check = false;
+                }
+                if(check) {
+                    alert("Đăng ký thành công!");
+                }
+            })
+        
+        }
+    </script>
+    </body>
+</html>
