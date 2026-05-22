@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 1</title>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <div>
+                <h1>text</h1>
+                <p>text</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="navigation">
+        <div><a href="#">Trang chủ</a></div>
+        <div><a href="#">Danh mục</a></div>
+        <div><a href="#">Dịch vụ</a></div>
+        <div><a href="#">Liên hệ</a></div>
+    </div>
+
+    <main>
+        <article class="content-box">
+            <h2>Giới thiệu thông tin cơ bản</h2>
+            <img src="https://via.placeholder.com/450" alt="Hình minh họa" width="450">
+
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </article>
+    </main>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 2</title>
+    <style>
+        .group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 10px auto;
+        }
+        .item {
+            width: 70px; 
+            height: 100px;
+            background-color: #00e56b;
+            border: 1px solid black;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            font-weight: 200;
+        }
+        .advert {
+            width: 100%;
+            height: 200px;
+            border: 2px solid red;
+            background-color: #ffe700;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s ease;
+        }
+        .advert:hover {
+            background-color: red;
+            color: white;
+            font-style: italic;
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Câu 2</h1>
+    <div class="group">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+    </div>
+    
+    <div class="advert">
+        text
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 3</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f7fb; }
+        #item-list { display: grid; gap: 14px; }
+        .item-box { background: #ffffff; border: 1px solid #d9e2ec; border-radius: 8px; padding: 14px; }
+        .item-box h3 { margin-top: 0; color: #1565c0; }
+    </style>
+</head>
+<body>
+    <h1>Câu 3</h1>
+    <div id="item-list"></div>
+
+    <script>
+        const dataJson = `[
+            {
+                "tieuDe": "1",
+                "thongTin1": "1.",
+                "thongTin2": "A"
+            },
+            {
+                "tieuDe": "2",
+                "thongTin1": "2.",
+                "thongTin2": "B"
+            },
+            {
+                "tieuDe": "3",
+                "thongTin1": "3.",
+                "thongTin2": "C"
+            }
+        ]`;
+
+        const items = JSON.parse(dataJson);
+        const list = document.getElementById("item-list");
+        var i = 0;
+
+        while (i < items.length) {
+            const item = items[i];
+            const div = document.createElement("div");
+            div.className = "item-box";
+            div.innerHTML = `
+                <h3>${item.tieuDe}</h3>
+                <p><strong>Thông tin chính:</strong> ${item.thongTin1}</p>
+                <p><strong>Thông tin phụ:</strong> ${item.thongTin2}</p>
+            `;
+            list.appendChild(div);
+            i++;
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 4</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: arial; background: #ffffff; }
+        input, select { display: block; width: 100%; margin-bottom: 2px; padding: 8px; }
+        .error { color: red; margin-bottom: 10px; font-size: 12px; height: 15px; }
+        button { width: 100%; padding: 10px; background-color: #1E88E5; color: white; border: none; }
+
+        @media (max-width: 414px) { .container { margin: 12px; padding: 14px; } }
+        @media (min-width: 415px) and (max-width: 1024px) { .container { max-width: 760px; margin: 18px auto; } }
+        @media (min-width: 1025px) { .container { max-width: 600px; margin: 20px auto; } }
+    </style>
+</head>
+<body>
+    <h2>Câu 4</h2>
+    <div class="container">
+        <form id="register">
+            <label for="field1">Text</label> 
+            <input type="text" id="field1" placeholder="Nhập thông tin...">
+            <div class="error" id="field1-error"></div>
+
+            <label for="field2">Email</label> 
+            <input type="email" id="field2" placeholder="example@gmail.com">
+            <div class="error" id="field2-error"></div>
+
+            <label for="field3">Select</label>
+            <select id="field3">
+                <option value="">---Chọn một giá trị---</option>
+                <option>A</option>
+                <option>Lựa chọn B</option>
+            </select>
+            <div class="error" id="field3-error"></div>
+
+            <button type="submit">Xác Nhận</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("register");
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            let field1 = document.getElementById("field1").value.trim();
+            let field2 = document.getElementById("field2").value.trim();
+            let field3 = document.getElementById("field3").value;
+
+            document.getElementById("field1-error").innerHTML = "";
+            document.getElementById("field2-error").innerHTML = "";
+            document.getElementById("field3-error").innerHTML = "";
+
+            let check = true;
+
+            if(field1 == "") {
+                document.getElementById("field1-error").innerHTML = "Vui lòng nhập thông tin";
+                check = false;
+            }
+            if(field2 == "" || !field2.includes("@")) {
+                document.getElementById("field2-error").innerHTML = "Email không hợp lệ";
+                check = false;
+            }
+            if(field3 == "") {
+                document.getElementById("field3-error").innerHTML = "Vui lòng chọn một mục";
+                check = false;
+            }
+            
+            if(check) {
+                alert("Gửi thông tin thành công!");
+            }
+        })
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 5</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fb; }
+        
+        .navigation { display: flex; gap: 15px; padding: 10px; background-color: #ddd; }
+        .navigation a { text-decoration: none; color: #333; font-weight: bold; }
+        .content-box { padding: 20px; }
+
+        .group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 10px auto;
+            padding: 0 20px;
+        }
+        .item {
+            width: 70px; 
+            height: 100px;
+            background-color: #00e56b;
+            border: 1px solid black;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            font-weight: 200;
+        }
+        .advert {
+            width: 100%;
+            height: 200px;
+            border: 2px solid red;
+            background-color: #ffe700;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .advert:hover {
+            background-color: red;
+            color: white;
+            font-style: italic;
+            border: 2px solid yellow;
+        }
+
+        #item-list { display: grid; gap: 14px; padding: 0 20px; margin-bottom: 20px; }
+        .item-box { background: #ffffff; border: 1px solid #d9e2ec; border-radius: 8px; padding: 14px; }
+        .item-box h3 { margin-top: 0; color: #1565c0; }
+
+        input, select { display: block; width: 100%; margin-bottom: 2px; padding: 8px; }
+        .error { color: red; margin-bottom: 10px; font-size: 12px; height: 15px; }
+        button { width: 100%; padding: 10px; background-color: #1E88E5; color: white; border: none; cursor: pointer; }
+        .container { background: #ffffff; border: 1px solid #d9e2ec; border-radius: 8px; padding: 20px; }
+
+        @media (max-width: 414px) { .container { margin: 12px; padding: 14px; } }
+        @media (min-width: 415px) and (max-width: 1024px) { .container { max-width: 760px; margin: 18px auto; } }
+        @media (min-width: 1025px) { .container { max-width: 600px; margin: 20px auto; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-area" style="padding: 20px;">
+            <div>
+                <h1>text</h1>
+                <p>text</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="navigation">
+        <div><a href="#">Trang chủ</a></div>
+        <div><a href="#">Danh mục</a></div>
+        <div><a href="#">Dịch vụ</a></div>
+        <div><a href="#">Liên hệ</a></div>
+    </div>
+
+    <main>
+        <article class="content-box">
+            <h2>Giới thiệu thông tin cơ bản</h2>
+            <img src="https://via.placeholder.com/450" alt="Hình minh họa" width="450">
+            <p>text</p>
+            <p>text</p>
+            <p>text</p>
+        </article>
+
+        <h2 style="padding-left: 20px;">Phần Layout (Câu 2)</h2>
+        <div class="group">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+        </div>
+        
+        <div class="advert">
+            text
+        </div>
+
+        <h2 style="padding-left: 20px;">Phần Dữ Liệu (Câu 3)</h2>
+        <div id="item-list"></div>
+
+        <h2 style="padding-left: 20px;">Phần Biểu Mẫu (Câu 4)</h2>
+        <div class="container">
+            <form id="register">
+                <label for="field1">Text</label> 
+                <input type="text" id="field1" placeholder="Nhập thông tin...">
+                <div class="error" id="field1-error"></div>
+
+                <label for="field2">Email</label> 
+                <input type="email" id="field2" placeholder="example@gmail.com">
+                <div class="error" id="field2-error"></div>
+
+                <label for="field3">Select</label>
+                <select id="field3">
+                    <option value="">---Chọn một giá trị---</option>
+                    <option>A</option>
+                    <option>Lựa chọn B</option>
+                </select>
+                <div class="error" id="field3-error"></div>
+
+                <button type="submit">Xác Nhận</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const dataJson = `[
+            {
+                "tieuDe": "1",
+                "thongTin1": "1.",
+                "thongTin2": "A"
+            },
+            {
+                "tieuDe": "2",
+                "thongTin1": "2.",
+                "thongTin2": "B"
+            },
+            {
+                "tieuDe": "3",
+                "thongTin1": "3.",
+                "thongTin2": "C"
+            }
+        ]`;
+
+        const items = JSON.parse(dataJson);
+        const list = document.getElementById("item-list");
+        var i = 0;
+
+        while (i < items.length) {
+            const item = items[i];
+            const div = document.createElement("div");
+            div.className = "item-box";
+            div.innerHTML = `
+                <h3>${item.tieuDe}</h3>
+                <p><strong>Thông tin chính:</strong> ${item.thongTin1}</p>
+                <p><strong>Thông tin phụ:</strong> ${item.thongTin2}</p>
+            `;
+            list.appendChild(div);
+            i++;
+        }
+
+        const form = document.getElementById("register");
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            let field1 = document.getElementById("field1").value.trim();
+            let field2 = document.getElementById("field2").value.trim();
+            let field3 = document.getElementById("field3").value;
+
+            document.getElementById("field1-error").innerHTML = "";
+            document.getElementById("field2-error").innerHTML = "";
+            document.getElementById("field3-error").innerHTML = "";
+
+            let check = true;
+
+            if(field1 == "") {
+                document.getElementById("field1-error").innerHTML = "Vui lòng nhập thông tin";
+                check = false;
+            }
+            if(field2 == "" || !field2.includes("@")) {
+                document.getElementById("field2-error").innerHTML = "Email không hợp lệ";
+                check = false;
+            }
+            if(field3 == "") {
+                document.getElementById("field3-error").innerHTML = "Vui lòng chọn một mục";
+                check = false;
+            }
+            
+            if(check) {
+                alert("Gửi thông tin thành công!");
+            }
+        });
+    </script>
+</body>
+</html>
